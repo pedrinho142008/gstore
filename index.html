@@ -934,7 +934,7 @@ footer { background:#eee5da; }
   <div class="container nav">
     <button class="iconbtn menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
     <a class="brand" href="#inicio" aria-label="GStore início">
-      <img src="public/images/Logo.png" alt="Logo GStore">
+      <img src="/images/Logo.png" alt="Logo GStore">
       <span class="brand-wordmark">
         <span class="brand-name">GSTORE</span>
         <span class="brand-tagline">MODA · ESTILO · ATITUDE</span>
@@ -998,7 +998,7 @@ footer { background:#eee5da; }
       </div>
     </div>
     <div class="hero-visual">
-      <img id="heroImage" src="public/images/gstore_cm_20261025_002803142.jpg"
+      <img id="heroImage" src="/images/gstore_cm_20261025_002803142.jpg"
         alt="Peça da coleção GStore" onerror="this.style.display='none'">
     </div>
   </div>
@@ -1049,7 +1049,7 @@ footer { background:#eee5da; }
     </div>
     <div class="editorial-image editorial-carousel" aria-label="Galeria da GStore">
       <img id="editorialImage"
-        src="public/images/gstore_cm_20261025_002805993.jpg"
+        src="/images/gstore_cm_20261025_002805993.jpg"
         alt="Moda e coleção da GStore" loading="lazy">
       <div class="editorial-photo-shade"></div>
       <div class="editorial-photo-caption">
@@ -1179,7 +1179,7 @@ const products = imageFiles.map((file, index) => ({
   id: index + 1,
   name: `Peça GStore ${String(index + 1).padStart(2, "0")}`,
   file,
-  image: `public/images/${file}`,
+  image: `/images/${file}`,
   isNew: index >= imageFiles.length - 8,
   search: `peça gstore look moda roupa ${String(index + 1).padStart(2, "0")}`
 }));
@@ -1249,7 +1249,7 @@ function renderProducts() {
       aria-label="Ver ${p.name}" style="animation-delay:${Math.min(index,12)*25}ms">
       <div class="product-photo">
         <img src="${p.image}" alt="${p.name}" loading="lazy"
-          onerror="this.onerror=null;this.src='public/images/Logo.png';this.style.objectFit='contain';this.style.padding='25px'">
+          onerror="this.onerror=null;this.src='/images/Logo.png';this.style.objectFit='contain';this.style.padding='25px'">
         <button class="favorite ${favorites.includes(p.id) ? "saved" : ""}"
           data-favorite="${p.id}" aria-label="${favorites.includes(p.id) ? "Remover dos favoritos" : "Adicionar aos favoritos"}"
           aria-pressed="${favorites.includes(p.id)}">${favorites.includes(p.id) ? "♥" : "♡"}</button>
@@ -1362,14 +1362,14 @@ renderProducts();
 <script id="gstore-photo-carousel">
 (() => {
   const photos = [
-    "public/images/gstore_cm_20261025_002803142.jpg",
-    "public/images/gstore_cm_20261025_002805993.jpg",
-    "public/images/gstore_cm_20261025_002809350.jpg",
-    "public/images/gstore_cm_20261025_002814860.jpg",
-    "public/images/gstore_cm_20261025_002817251.jpg",
-    "public/images/gstore_cm_20261025_002820490.jpg",
-    "public/images/gstore_cm_20261025_002823664.jpg",
-    "public/images/gstore_cm_20261025_002827827.jpg"
+    "/images/gstore_cm_20261025_002803142.jpg",
+    "/images/gstore_cm_20261025_002805993.jpg",
+    "/images/gstore_cm_20261025_002809350.jpg",
+    "/images/gstore_cm_20261025_002814860.jpg",
+    "/images/gstore_cm_20261025_002817251.jpg",
+    "/images/gstore_cm_20261025_002820490.jpg",
+    "/images/gstore_cm_20261025_002823664.jpg",
+    "/images/gstore_cm_20261025_002827827.jpg"
   ];
 
   function setupCarousel(config) {
